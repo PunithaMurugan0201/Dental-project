@@ -19,7 +19,8 @@ const Casestudy = () => {
           Authorization: `Bearer ${token}`,
         },
       });
-      setPatients(response.data);
+      console.log("Fetched response:", response.data); // ✅ Add this
+      setPatients(response.data.patients); // ✅ FIXED
     } catch (error) {
       console.error("Error fetching patient data:", error);
       alert("Failed to load patients");
@@ -27,10 +28,17 @@ const Casestudy = () => {
       setLoading(false);
     }
   };
+  
 
   useEffect(() => {
+    if (!token) {
+      navigate("/login"); // or any route
+      return;
+    }
+  
     fetchPatients();
   }, []);
+  
 
   const handleView = (id) => navigate(`/patient/${id}`);
   const handleUpdate = (id) => navigate(`/update/${id}`);

@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import {AuthContext} from "../AuthContext";
 import "./BDSLogin.css"; 
 
 const MDSPage = () => {
@@ -34,7 +33,7 @@ const MDSPage = () => {
 
   return (
     <div className="login-container">
-      <h2>BDS Login</h2>
+      <h2>MDS Login</h2>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleLogin}>
         <input

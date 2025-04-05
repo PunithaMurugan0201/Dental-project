@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom"; // ✅ import this
 import bgImage from "/src/assets/images/bg.jpg";
 import "./Newpatient.css"; // Import the CSS file for styling
 
 const Newpatient = () => {
+  const navigate = useNavigate(); // ✅ define this
   const [formData, setFormData] = useState({
     name: "",
     serialNo: "",

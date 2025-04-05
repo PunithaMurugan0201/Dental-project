@@ -2,6 +2,8 @@ import mongoose from "mongoose";
 
 const PatientSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }, // 🔹 Link to User
+  reg_no: { type: String },
+
   name: { type: String, required: true },
   serialNo: { type: String, required: true },
   orthoNo: { type: String, required: true },
