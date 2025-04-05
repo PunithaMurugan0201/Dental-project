@@ -1,0 +1,150 @@
+.dashboard-container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  position: absolute;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center;
+  height: 100vh;
+  overflow-y:scroll;
+  gap: 20px; /* Maintain stable gap between elements */
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 20px; /* Controls space below the heading */
+  text-align: center;
+  width: 100%;
+}
+
+.add-record-btn {
+  background-color: #28a745;
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  margin-bottom: 20px; /* Keeps spacing stable */
+  margin: 5px auto; /* Centering the button */
+  width: auto; /* Fit content width */
+  min-width: 100px;
+  display: block;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Ensures consistent spacing */
+  min-height: 200px; /* Reserves space for new data */
+}
+
+.patient-table th,
+.patient-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.patient-table th {
+  background-color: #f4f4f4;
+  font-size: 1.2rem;
+}
+
+.patient-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.patient-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.view-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 5px 8px; /* Reduced padding */
+  font-size: 0.8rem; /* Smaller font size */
+  width: auto; /* Ensures it adjusts to content */
+  min-width: 60px; /* Prevents it from being too small */
+  height: 30px; /* Controls height */
+}
+
+.update-btn {
+  background-color: #22903e;
+  color: white;
+  padding: 5px 8px; /* Reduced padding */
+  font-size: 0.8rem; /* Smaller font size */
+  width: auto; /* Ensures it adjusts to content */
+  min-width: 60px; /* Prevents it from being too small */
+  height: 30px; /* Controls height */
+}
+
+.delete-btn {
+  
+  color: white;
+  padding: 5px 8px; /* Reduced padding */
+  font-size: 0.8rem; /* Smaller font size */
+  width: auto; /* Ensures it adjusts to content */
+  min-width: 60px; /* Prevents it from being too small */
+  height: 30px; /* Controls height */
+}
+
+.download-btn {
+  
+  color: #fff;
+  padding: 5px 8px; /* Reduced padding */
+  font-size: 0.8rem; /* Smaller font size */
+  width: auto; /* Ensures it adjusts to content */
+  min-width: 60px; /* Prevents it from being too small */
+  height: 30px;
+}
+
+.download-btn:hover {
+  background: #1f0990;
+}
+
+.view-btn {
+  background: #17a2b8; /* Teal */
+  color: #fff;
+}
+
+
+
+.download-btn {
+  background: #007bff; /* Blue */
+  color: #fff;
+}
+
+.delete-btn {
+  background: #dc3545; /* Red */
+  color: #fff;
+}
+
+.view-btn:hover {
+  background: #138496;
+}
+
+.update-btn:hover {
+  background: #e0a800;
+}
+
+.download-btn:hover {
+  background: #0056b3;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+

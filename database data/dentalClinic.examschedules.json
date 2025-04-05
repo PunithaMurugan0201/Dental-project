@@ -1,0 +1,103 @@
+[{
+  "_id": {
+    "$oid": "67ea11b202e33229204097af"
+  },
+  "batch": "BDS",
+  "year": 2024,
+  "month": 3,
+  "students": [
+    {
+      "reg_no": "BDS001",
+      "name": "Punitha",
+      "marks": [
+        {
+          "subject": "Anatomy",
+          "date": "2024-06-10",
+          "time": "10:00 AM"
+        },
+        {
+          "subject": "Physiology",
+          "date": "2024-06-12",
+          "time": "02:00 PM"
+        },
+        {
+          "subject": "Biochemistry",
+          "date": "2024-06-15",
+          "time": "09:00 AM"
+        },
+        {
+          "subject": "Orthodontics",
+          "date": "2024-07-05",
+          "time": "01:00 PM"
+        },
+        {
+          "subject": "Oral Surgery",
+          "date": "2024-07-15",
+          "time": "09:00 AM"
+        }
+      ]
+    },
+    {
+      "reg_no": "BDS002",
+      "name": "Sathish",
+      "marks": [
+        {
+          "subject": "Dental Materials",
+          "date": "2024-06-18",
+          "time": "11:00 AM"
+        },
+        {
+          "subject": "Oral Pathology",
+          "date": "2024-06-20",
+          "time": "01:00 PM"
+        },
+        {
+          "subject": "General Pathology",
+          "date": "2024-06-22",
+          "time": "03:00 PM"
+        },
+        {
+          "subject": "Microbiology",
+          "date": "2024-06-25",
+          "time": "10:00 AM"
+        },
+        {
+          "subject": "Prosthodontics",
+          "date": "2024-07-12",
+          "time": "02:00 PM"
+        }
+      ]
+    },
+    {
+      "reg_no": "BDS003",
+      "name": "Swetha",
+      "marks": [
+        {
+          "subject": "Pharmacology",
+          "date": "2024-06-28",
+          "time": "02:00 PM"
+        },
+        {
+          "subject": "Oral Medicine & Radiology",
+          "date": "2024-07-01",
+          "time": "09:00 AM"
+        },
+        {
+          "subject": "Periodontology",
+          "date": "2024-07-03",
+          "time": "11:00 AM"
+        },
+        {
+          "subject": "Pedodontics",
+          "date": "2024-07-07",
+          "time": "03:00 PM"
+        },
+        {
+          "subject": "Community Dentistry",
+          "date": "2024-07-18",
+          "time": "11:00 AM"
+        }
+      ]
+    }
+  ]
+}]

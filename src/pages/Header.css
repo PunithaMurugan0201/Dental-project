@@ -1,0 +1,47 @@
+header {
+    background: linear-gradient(135deg, #4b4b91, #2c3e50); /* Gradient background */
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 1); /* Deeper shadow for more contrast */
+}
+
+header .logo-container {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .logo-container img {
+    width: 100px;
+    height: auto;
+    border-radius:50px;
+}
+
+header .site-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: Aptos, sans-serif;
+    text-align: center;
+}
+
+header .site-name h1,
+header .site-name h3,
+header .site-name p {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+header .site-name h3 {
+    color: #f39c12; 
+    margin-top:10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,179 @@
+.body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; /* Optional */
+}
+
+.profile-container {
+    width: 70%; /* Adjusted width */
+    max-width: 800px; /* Ensures it doesn't exceed 800px */
+    margin: 20px auto; /* Centers the container */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.527); /* Semi-transparent white background */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container:hover {
+    transform: scale(1.02);
+}
+
+/* Profile Header */
+.profile-header {
+    position: relative;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    padding: 15px;
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+}
+
+/* Profile Image */
+.profile-img-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -40px;
+}
+
+.profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* Upload Icon */
+.upload-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #007bff;
+    color: white;
+    padding: 4px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Form Fields */
+.profile-form {
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.profile-form label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.profile-form input,
+.profile-form select,
+.profile-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.3s ease-in-out;
+}
+
+.profile-form input:focus,
+.profile-form select:focus,
+.profile-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.profile-btn {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.profile-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-container {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+}
+/* Hide File Input */
+.hidden-input {
+    display: none;
+}
+
+/* Profile Image Container */
+.profile-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Upload Icon (Always Below Profile Picture) */
+.upload-icon {
+    display: inline-block;
+    margin-top: 8px;
+    background: #007bff;
+    color: white;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.upload-icon:hover {
+    background: #0056b3;
+}

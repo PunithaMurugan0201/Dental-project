@@ -1,0 +1,50 @@
+[{
+  "_id": "67d5832f176e379655650f93",
+  "batch": "BDS",
+  "year": 2024,
+  "month": 3,
+  "students": [
+    {
+      "reg_no": "BDS001",
+      "name": "Punitha",
+      "marks": [
+        {
+          "subject": "ORTHODONTICS",
+          "theory": 90,
+          "practical": 90,
+          "clinical": 80,
+          "total": 260,
+          "grade": "A"
+        }
+      ]
+    },
+    {
+      "reg_no": "BDS002",
+      "name": "Sathish",
+      "marks": [
+        {
+          "subject": "ORTHODONTICS",
+          "theory": 96.67,
+          "practical": 95,
+          "clinical": 90,
+          "total": 281.67,
+          "grade": "A+"
+        }
+      ]
+    },
+    {
+      "reg_no": "BDS003",
+      "name": "Swetha",
+      "marks": [
+        {
+          "subject": "ORTHODONTICS",
+          "theory": 86.67,
+          "practical": 85,
+          "clinical": 70,
+          "total": 241.67,
+          "grade": "B+"
+        }
+      ]
+    }
+  ]
+}]

@@ -1,0 +1,24 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "e25ab3b8-e935-44f7-aeac-56052a32ad7c",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1743572902639"
+        }
+      },
+      "favorite": {
+        "name": "miniproject"
+      },
+      "savedConnectionType": "favorite",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/auth_data",
+        "oidc": {}
+      }
+    }
+  ]
+}

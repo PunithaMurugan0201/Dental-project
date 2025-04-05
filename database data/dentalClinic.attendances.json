@@ -1,0 +1,65 @@
+[{
+  "_id": "67d5832f176e379655650f93",
+  "batch": "BDS",
+  "year": 2024,
+  "month": 3,
+  "students": [
+    {
+      "reg_no": "BDS001",
+      "name": "Punitha",
+      "theory": {
+        "total": 30,
+        "attended": 27,
+        "percentage": 90
+      },
+      "practical": {
+        "total": 20,
+        "attended": 18,
+        "percentage": 90
+      },
+      "clinical": {
+        "total": 10,
+        "attended": 8,
+        "percentage": 80
+      }
+    },
+    {
+      "reg_no": "BDS002",
+      "name": "Sathish",
+      "theory": {
+        "total": 30,
+        "attended": 29,
+        "percentage": 96.67
+      },
+      "practical": {
+        "total": 20,
+        "attended": 19,
+        "percentage": 95
+      },
+      "clinical": {
+        "total": 10,
+        "attended": 9,
+        "percentage": 90
+      }
+    },
+    {
+      "reg_no": "BDS003",
+      "name": "Swetha",
+      "theory": {
+        "total": 30,
+        "attended": 26,
+        "percentage": 86.67
+      },
+      "practical": {
+        "total": 20,
+        "attended": 17,
+        "percentage": 85
+      },
+      "clinical": {
+        "total": 10,
+        "attended": 7,
+        "percentage": 70
+      }
+    }
+  ]
+}]

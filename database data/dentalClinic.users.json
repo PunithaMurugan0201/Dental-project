@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "67d133647e4ce7a153e684c9"
+  },
+  "username": "Punitha",
+  "email": "punitha@gmail.com",
+  "password": "1234",
+  "reg_no": "BDS001",
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "67d1343d7e4ce7a153e684ca"
+  },
+  "username": "Sathish",
+  "email": "sathish@gmail.com",
+  "password": "1234",
+  "reg_no": "BDS002",
+  "role": "user"
+},
+{
+  "_id": {
+    "$oid": "67d1350f7e4ce7a153e684cb"
+  },
+  "username": "swetha",
+  "email": "swetha@gmail.com",
+  "password": "1234",
+  "reg_no": "BDS003",
+  "role": "user"
+}]
