@@ -17,12 +17,14 @@ const Dashboard = () => {
 
           <div className="container-grid">
             {/* Case Study Container */}
-            <Link to="/casestudy" className="container-item">
+            
+            <div className="container-item" onClick={() => navigate('/casestudy')}>
               <div className="icon">
                 <i className="fas fa-book"></i>
               </div>
               <h2>Case Studies</h2>
-            </Link>
+            </div>
+
 
             {/* Attendance Container */}
             <div className="container-item" onClick={() => navigate('/attendance')}>
@@ -45,7 +47,7 @@ const Dashboard = () => {
               <div className="icon">
                 <i className="fas fa-calendar-alt"></i>
               </div>
-              <h2>Examination Schedules</h2>
+              <h2>Follow up card</h2>
             </div>
 
             <div className="container-item" onClick={() => navigate('/profile')}>

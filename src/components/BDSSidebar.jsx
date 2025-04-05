@@ -30,7 +30,7 @@ const BDSSidebar = ({ user, setUser, isOpen, setIsSidebarOpen }) => {
     { name: "Attendance", path: "/attendance", icon: "📅" },
     { name: "Marks", path: "/marks", icon: "📊" },
     { name: "Profile", path: "/profile", icon: "👤" },
-    { name: "Exam Schedules", path: "/examschedule", icon: "📅" },
+    { name: "Cases Studies", path: "/casestudy", icon: "📋" },
     { name: "Study Materials", path: "/studymaterials", icon: "📖" },
     { name: "Logout", action: handleLogout, icon: "🚪" },
   ];
