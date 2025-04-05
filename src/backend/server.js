@@ -13,6 +13,7 @@ import profileRoutes from "./routes/profile.js";
 import marksRoutes from "./routes/marksRoutes.js";
 import examRoutes from "./routes/examRoutes.js";
 import studyMaterialsRoute from "./routes/studyMaterials.js";
+import loginRoutes from "./routes/Login.js";
 
 // Get the current directory using import.meta.url
 const __filename = fileURLToPath(import.meta.url);
@@ -44,6 +45,7 @@ app.use("/api/profile", profileRoutes);
 app.use("/api/marks", marksRoutes);
 app.use("/api/examSchedule", examRoutes);
 app.use("/", studyMaterialsRoute);
+app.use("/api", loginRoutes);
 
 
 // Serve static files from the 'uploads' folder

@@ -1,13 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./BDSLogin.css"; 
+import "./BDSLogin.css"; // Use same styling or create a separate one if needed
 
-const MDSPage = () => {
+const MDSPage = ({ setUser }) => {
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext);
   const [credentials, setCredentials] = useState({ reg_no: "", password: "" });
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -16,18 +16,33 @@ const MDSPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
+    setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", credentials);
-      
+      const response = await axios.post("http://localhost:5000/api/login/mds", credentials);
+
+      console.log("Login Response:", response.data); // Debugging purpose
+
       if (response.data.success) {
-        login(response.data.user);
+        // Store token and user in localStorage
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("user", JSON.stringify(response.data.user));
+
+        // Update user in app state
+        if (setUser) {
+          setUser(response.data.user);
+        }
+
+        // Redirect to homemds page
         navigate("/homemds");
       } else {
         setError("Invalid credentials. Please try again.");
       }
     } catch (error) {
-      setError(error.response?.data?.error || "Error logging in.");
+      console.error("Login Error:", error.response?.data || error.message);
+      setError(error.response?.data?.message || "Error logging in.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -52,7 +67,9 @@ const MDSPage = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Logging in..." : "Login"}
+        </button>
       </form>
     </div>
   );

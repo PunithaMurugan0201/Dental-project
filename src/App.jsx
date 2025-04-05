@@ -68,7 +68,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/bds" element={<BDSLogin setUser={setUser} />} />
-            <Route path="/mds" element={<MDSPage />} />
+            <Route path="/mds" element={<MDSPage setUser={setUser} />} />
 
             {user ? (
               <>
