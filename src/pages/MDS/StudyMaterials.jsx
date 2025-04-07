@@ -24,7 +24,7 @@ function StudyMaterials() {
                 color: "#2c3e50",
                 marginBottom: "30px",
                 fontSize: "28px"
-            }}>📚 Study Materials (BDS)</h2>
+            }}>📚 Study Materials (MDS)</h2>
 
             {materials.length === 0 ? (
                 <p style={{

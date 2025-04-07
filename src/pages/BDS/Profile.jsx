@@ -162,7 +162,15 @@ const Profile = ({ user }) => {
         <input type="text" name="university" value={profile.university} onChange={handleChange} required />
 
         <label>Contact Number:</label>
-        <input type="tel" name="contact" value={profile.contact} onChange={handleChange} required />
+        <input
+          type="tel"
+          name="contact"
+          value={profile.contact}
+          onChange={handleChange}
+          required
+          pattern="[0-9]{10}"
+          title="Please enter a valid 10-digit contact number"
+        />
 
         <label>Bio:</label>
         <textarea name="bio" value={profile.bio} onChange={handleChange} rows="3" />

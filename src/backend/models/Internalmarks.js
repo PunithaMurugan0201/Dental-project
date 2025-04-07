@@ -10,7 +10,7 @@ const MarksSchema = new mongoose.Schema({
 });
 
 const StudentSchema = new mongoose.Schema({
-  reg_no: { type: String, required: true, unique: true }, // Added unique constraint
+  reg_no: { type: String, required: true }, // Added unique constraint
   name: { type: String, required: true },
   marks: [MarksSchema],
 });

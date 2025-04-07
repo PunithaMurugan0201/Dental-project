@@ -1,5 +1,5 @@
 import express from "express";
-import InternalMarks from "../models/InternalMarks.js";
+import InternalMarks from "../models/Internalmarks.js";
 
 const router = express.Router();
 

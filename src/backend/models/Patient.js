@@ -5,9 +5,9 @@ const PatientSchema = new mongoose.Schema({
   reg_no: { type: String },
 
   name: { type: String, required: true },
-  serialNo: { type: String, required: true },
-  orthoNo: { type: String, required: true },
-  opNo: { type: String, required: true },
+  serialNo: { type: String, required: true, unique: true },
+  orthoNo: { type: String, required: true, unique: true },
+  opNo: { type: String, required: true , unique: true},
   age: { type: Number, required: true },
 
   address: { type: String, required: true },

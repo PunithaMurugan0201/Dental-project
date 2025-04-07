@@ -3,7 +3,7 @@ import express from "express";
 import multer from "multer";
 import fs from "fs";
 import path from "path";
-import Profile from "../models/Profile.js";
+import Profile from "../models/profile.js";
 import User from "../models/User.js";
 import authenticateUser from "../middleware/authenticateUser.js";
 

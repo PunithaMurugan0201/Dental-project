@@ -43,12 +43,7 @@ const Dashboard = () => {
             </div>
 
             {/* Examination Schedules Container */}
-            <div className="container-item" onClick={() => navigate('/examschedule')}>
-              <div className="icon">
-                <i className="fas fa-calendar-alt"></i>
-              </div>
-              <h2>Follow up card</h2>
-            </div>
+            
 
             <div className="container-item" onClick={() => navigate('/profile')}>
               <div className="icon">
