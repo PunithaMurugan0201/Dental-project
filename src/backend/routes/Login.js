@@ -26,7 +26,11 @@ router.post("/login/mds", async (req, res) => {
     }
 
     // Create JWT token
-    const token = jwt.sign({ id: user._id }, "your_secret_key", { expiresIn: "1d" });
+const token = jwt.sign(
+      {  _id: user._id, reg_no: user.reg_no, role: user.role }, // ✅ Use userId
+      process.env.JWT_SECRET,
+      { expiresIn: "1d" }
+    );
 
     // Respond with token and user info
     res.json({

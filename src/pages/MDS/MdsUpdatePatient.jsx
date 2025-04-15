@@ -12,7 +12,7 @@ const UpdatePatient = () => {
     const token = localStorage.getItem("token"); // 🔥 Get token from local storage
   
     axios
-      .get(`http://localhost:5000/api/patients/${id}`, {
+      .get(`http://localhost:5000/api/mdspatient/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -32,7 +32,7 @@ const UpdatePatient = () => {
   
     try {
       await axios.put(
-        `http://localhost:5000/api/patients/${id}`,
+        `http://localhost:5000/api/mdspatient/${id}`,
         patient,
         {
           headers: {

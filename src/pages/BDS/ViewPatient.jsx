@@ -9,11 +9,18 @@ const ViewPatient = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+  
     axios
-      .get(`http://localhost:5000/api/patients/${id}`)
+      .get(`http://localhost:5000/api/patients/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((response) => setPatient(response.data))
       .catch((error) => console.error("Error fetching patient:", error));
   }, [id]);
+  
 
   if (!patient) return <p className="loading-text">Loading patient details...</p>;
 

@@ -17,12 +17,16 @@ import ExamSchedule from "./pages/BDS/ExamSchedule";
 import Newpatient from "./pages/BDS/Newpatient";
 import ViewPatient from "./pages/BDS/ViewPatient";
 import UpdatePatient from "./pages/BDS/UpdatePatient";
+import MdsViewPatient from "./pages/MDS/MdsViewPatient";
+import MdsUpdatePatient from "./pages/MDS/MdsUpdatePatient";
 
 // MDS Specific Pages
 import Homemds from "./pages/MDS/Homemds";
 import Casestudy from "./pages/BDS/Casestudy";
 import Mdscasestudy from "./pages/MDS/Mdscasestudy";
 import Mdsrecord from "./pages/MDS/Mdsrecord";
+import FollowupCard from "./pages/BDS/FollowUpCard"; 
+import MdsFollowupCard from "./pages/MDS/MdsFollowupCard"; 
 
 function App() {
   const [user, setUser] = useState(null);
@@ -81,7 +85,10 @@ function App() {
                 <Route path="/newpatient" element={<Newpatient user={user} />} />
                 <Route path="/patient/:id" element={<ViewPatient user={user} />} />
                 <Route path="/update/:id" element={<UpdatePatient user={user} />} />
-
+                <Route path="/mdspatient/:id" element={<MdsViewPatient user={user} />} />
+                <Route path="/mdsupdate/:id" element={<MdsUpdatePatient user={user} />} />
+                <Route path="/followupcard/:patientId" element={<FollowupCard user={user} />} />
+                <Route path="/mdsfollowupcard/:patientId" element={<MdsFollowupCard user={user} />} />
                 {/* MDS Specific Routes */}
                 <Route path="/homemds" element={<Homemds user={user} />} />
                 <Route path="/casestudy" element={<Casestudy user={user} />} />
@@ -95,7 +102,7 @@ function App() {
         </main>
       </div>
 
-      <Footer />
+    
     </div>
   );
 }

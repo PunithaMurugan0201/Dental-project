@@ -1,5 +1,7 @@
 import express from "express";
 import Patient from "../models/Patient.js";
+import Followup from "../models/Followup.js";
+
 import authenticateUserForCasestudy from "../middleware/authenticateUserForCasestudy.js";
 
 const router = express.Router();
@@ -83,6 +85,54 @@ router.delete("/:id", authenticateUserForCasestudy, async (req, res) => {
     res.json({ message: "Deleted" });
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+});
+
+router.get("/search", authenticateUserForCasestudy, async (req, res) => {
+  try {
+    const { term } = req.query;
+    if (!term) {
+      return res.status(400).json({ message: "Search term is required" });
+    }
+
+    // Search by name, opNo, orthoNo, or telephone
+    const patient = await Patient.findOne({
+      $or: [
+        { name: { $regex: term, $options: "i" } },
+        { opNo: term },
+        { orthoNo: term },
+        { telephone: term }
+      ],
+      userId: req.user._id
+    });
+
+    if (!patient) {
+      return res.status(404).json({ message: "Patient not found" });
+    }
+
+    // Get all followups for this patient
+    const followups = await Followup.find({ patientId: patient._id })
+      .sort({ date: -1 });
+
+    res.json({ patient, followups });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+router.get("/:id", authenticateUserForCasestudy, async (req, res) => {
+  try {
+    const patient = await Patient.findById(req.params.id);
+    if (!patient) {
+      return res.status(404).json({ message: "Patient not found" });
+    }
+
+    const followups = await Followup.find({ patientId: patient._id });
+
+    res.status(200).json({ ...patient.toObject(), followups }); // 👈 combine patient & followups
+  } catch (err) {
+    res.status(500).json({ message: err.message });
   }
 });
 

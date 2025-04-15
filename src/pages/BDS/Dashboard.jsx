@@ -24,6 +24,7 @@ const Dashboard = () => {
               </div>
               <h2>Case Studies</h2>
             </div>
+            
 
 
             {/* Attendance Container */}

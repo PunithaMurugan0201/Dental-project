@@ -102,7 +102,8 @@ const Casestudy = () => {
               <th>Patient Name</th>
               <th>OPD No</th>
               <th>Contact</th>
-              <th>Actions</th>
+              <th>Case Study</th>
+              <th>Followup</th>
             </tr>
           </thead>
           <tbody>
@@ -113,19 +114,22 @@ const Casestudy = () => {
                   <td>{patient.opNo}</td>
                   <td>{patient.telephone}</td>
                   <td>
-                    <button className="btn view-btn" onClick={() => handleView(patient._id)}>
-                      <Eye size={16} /> View
-                    </button>
-                    <button className="btn update-btn" onClick={() => handleUpdate(patient._id)}>
-                      <Edit size={16} /> Update
-                    </button>
-                    <button className="btn delete-btn" onClick={() => handleDelete(patient._id)}>
-                      <Trash2 size={16} /> Delete
-                    </button>
-                    <button className="btn download-btn" onClick={() => handleDownload(patient)}>
-                      <Download size={16} /> Download
-                    </button>
-                  </td>
+  <button className="btn view-btn" onClick={() => handleView(patient._id)}>
+    <Eye size={16} /> View
+  </button>
+  <button className="btn update-btn" onClick={() => handleUpdate(patient._id)}>
+    <Edit size={16} /> Edit
+  </button>
+</td>
+<td>
+  <button className="btn view-btn" onClick={() => navigate(`/followupcard/${patient._id}`)}>
+    <Eye size={16} /> View
+  </button>
+  <button className="btn update-btn" onClick={() => navigate(`/followup/${patient._id}/edit`)}>
+    <Edit size={16} /> Edit
+  </button>
+</td>
+
                 </tr>
               ))
             ) : (
